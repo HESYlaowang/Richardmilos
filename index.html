@@ -1,0 +1,25 @@
+<html><head>
+    <title>Never gonna give you up</title>
+    </head>
+    <body>
+    <video src="xjj.mp4" style="width: 100%;height: 100%;margin: none;padding: none;border: none;" autoplay="true" loop="loop" controls="controls"></video>
+    
+    <script type="text/javascript">
+        var video=document.querySelector("body > video")
+        const promise = video.play();
+    
+          if (promise !== undefined) {
+            promise.then(() => {
+              // Autoplay started
+            }).catch(error => {
+              // Autoplay was prevented.
+              video.muted=true;
+              video.play()
+              //video.onmouseclick=() => {
+              //  video.play();
+              //}
+            });
+          }
+      </script>
+    
+    </body></html>
